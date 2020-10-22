@@ -1,0 +1,9 @@
+<div class="grid-container">
+  <div class="grid-x grid-margin-x" style="flex-wrap: wrap; margin-top: 3em; ">
+    <div class="medium-4 cell mood" *ngFor="let mood of moods; index as id">
+      <div style="height: 100px; ">
+        <a class="h4" [routerLink]="['/mood', id]">{{mood.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>

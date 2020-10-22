@@ -1,0 +1,22 @@
+<div class="grid-container">
+    <div class="grid-x">
+        <div *ngIf="mood">
+            <h3>{{mood.name}}</h3>
+            <h4>{{mood.type}}</h4>
+        </div>
+    </div>
+    
+    <div *ngIf="mood">
+        <div class="grid-x grid-margin-x medium-up-4">
+            <div class="cell" *ngFor="let movie of genreMovies">
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <div class="card-section">
+                        <!-- <div><a [routerLink]="['/movie', movie.id]">{{movie.title}}</a></div> -->
+                        <div>{{movie.title}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
