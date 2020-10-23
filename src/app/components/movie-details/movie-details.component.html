@@ -1,6 +1,66 @@
-<div class="grid-container">
-    <div class="grid-x">
-        <div >{{title}}</div>
-        <div >{{overview}}</div>
+<style>
+
+
+</style>
+
+<div class="grid-container" style="margin-top: 2em;">
+  <div class="grid-x movie">
+    <div class="cell medium-4">
+      <img src="https://image.tmdb.org/t/p/w500/{{poster}}">
     </div>
+    <div class="cell medium-7" style="margin-left: 1em; margin-top: 10em">
+      <div class="grid-x">
+        <div class="cell header">
+          <h3 class="title" style="font-weight: 800;">{{title}}</h3>
+        </div>
+        <div class="cell details">
+          <div class="cell" style="margin-bottom: 2em">{{overview}}</div>
+          <!--<div *ngIf="watchedMovies">   
+            <button class="button cell watchlist">Add to Favorites</button>
+          </div>-->
+          <button id="addToFavorites" class="button cell watchlist" (click)="addToFavorites(movie, title, poster)">Add to Favorites</button>
+          <!-- <button id="addToWatched" class="button cell" (click)="addToWatchedlist(movie, title)">Watched</button>-->
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="movie card" >
+        <div class="header">
+            <div *ngIf="watchedMovies">
+                <div class="title retrieved">{{title}}</div>
+            </div>
+            <ng-template>
+                <div class="title">{{title}}</div>
+            </ng-template>
+        </div>
+        <div class="card-section">
+            <div class="cell">{{overview}}</div>
+          <button class="button cell watchlist">Add to Favorites</button>
+          <button id="addToWatched" class="button cell" (click)="addToWatchedlist(movie, title)">Watched</button>
+        </div>
+    </div>-->
+    <!---->
+    <!--
+    <div *ngFor="let watchedMovie of watchedMovies; let i = index">
+      <div *ngIf="watchedMovie.movieId == movie; else elseBlock">
+        <div id="{{movie}}" class="movie retrieved {{i}}">
+          <div class="cell">{{title}}</div>
+          <div class="cell">{{overview}}</div>
+          <button class="button cell watchlist">Add to Favorites</button>
+          <button id="addToWatched" class="button cell" (click)="addToWatchedlist(movie, title)">Watched</button>
+        </div>
+      </div>
+      <ng-template #elseBlock>
+        <div id="{{movie}}" class="movie" style="">
+            <div class="cell">{{title}}</div>
+            <div class="cell">{{overview}}</div>
+            <button class="button cell">Add to Favorites</button>
+            <button id="addToWatched" class="button cell" (click)="addToWatchedlist(movie, title)">Watched checkmark</button>
+          </div>
+        </ng-template>
+      
+  </div> -->
+
+
+  </div>
 </div>

@@ -1,9 +1,13 @@
 <div class="grid-container">
-  <div class="grid-x grid-margin-x" style="flex-wrap: wrap; margin-top: 3em; ">
-    <div class="medium-4 cell mood" *ngFor="let mood of moods; index as id">
-      <div style="height: 100px; ">
-        <a class="h4" [routerLink]="['/mood', id]">{{mood.name}}</a>
-      </div>
+    <div class="grid-x" style="margin-top: 2em;">
+        <div class="cell h4" style="margin: 0 auto; color: red; font-weight: 600; text-align: center;">I FEEL LIKE</div>
     </div>
+  <div class="grid-x grid-margin-x" style="flex-wrap: wrap; margin-top: 3em; ">
+    
+    <a class="medium-4 cell mood" [routerLink]="['/mood', id]" *ngFor="let mood of moods; index as id" style="background-image: url('{{mood.image}}');"> 
+      <div class="" style="display: flex; align-self: middle; margin: 0 auto;" >
+        <a style="align-self: center" class="h4" >{{mood.name}}</a>
+      </div>
+    </a>
   </div>
 </div>

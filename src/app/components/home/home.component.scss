@@ -9,4 +9,16 @@
     color: #fff;
     text-align: center;
     font-weight: 800;
+    
+}
+.mood {
+    height: 200px;
+    display: flex;
+
+    .image {
+        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    };
 }

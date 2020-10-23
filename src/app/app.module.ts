@@ -10,6 +10,7 @@ import { MoodComponent } from './components/mood/mood.component';
 import { MoodListerComponent } from './components/mood-lister/mood-lister.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     MoodComponent,
     MoodListerComponent,
     MovieComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<div class="grid-container" style="margin-top: 2em;">
+    <div class="grid-x grid-margin-x medium-up-4">
+        <div class="cell" *ngFor="let movie of favorites">
+            <a class="card listerCard" [routerLink]="['/movie', movie.movieId]">
+                <img src="https://image.tmdb.org/t/p/w500/{{movie.poster}}">
+                <div class="card-section">
+                    <div><a >{{movie.movieName}}</a></div> 
+                    <!--<div>{{movie.title}}</div>-->
+                </div>
+            </a>
+        </div>
+        <!-- 
+        <ng-template #error>
+            <div class="cell text-align" style="width: 100%; text-align: center;">
+                <h2>Add a movie to your favorites to begin!</h2>
+            </div>
+        </ng-template> -->
+    </div>
+</div>

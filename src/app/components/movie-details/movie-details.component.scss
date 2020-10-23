@@ -1,0 +1,19 @@
+.movie {
+  
+}
+button.watched {
+    background-color: green;
+  }
+
+.movie.retrieved {
+    //color: green;
+    button#addToWatched {
+        background-color: green;
+    }
+}
+
+.movie.favorited {
+    button {
+        background-color: green;
+    }
+}
