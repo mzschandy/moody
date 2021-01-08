@@ -52,6 +52,7 @@ export class FavoritesService {
   }
 
   getWatchlist() {
+    
     if(localStorage.getItem("Watchlist") != null) {
       console.log("Favorites Local Storage found!")
 
