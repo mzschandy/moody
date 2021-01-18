@@ -1,0 +1,44 @@
+header {
+    height: 80px;
+    max-width: 1640px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    font-family: "Anton";
+    text-transform: uppercase;
+
+    & > div {
+        //margin: 1em;
+        flex: 33%;
+    }
+
+    .title {
+        font-size: 2em;
+        text-align: center;
+        color: #850007;
+    }
+}
+
+.header {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    opacity: .6;
+    //margin: 0 auto;
+
+    & > div {
+        margin: .5em auto;
+        font-weight: 600;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .title {
+        font-size: 2.5em;
+    }
+}
