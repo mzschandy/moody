@@ -1,0 +1,61 @@
+.moodTitle {
+    color: #fff;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.lister {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    max-width: 1640px;
+    margin: 0 auto;
+
+}
+.movies {
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-column-gap: 15px;
+
+    .movie {
+        display: flex;
+        height: 220px;
+        margin-bottom: 26px;
+        //background-color: red;
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+    .lister {
+        grid-template-columns: auto auto auto auto auto;
+    }
+    .movies .movie {
+        height: 270px;
+    }
+    
+}
+//Small tablet only -----------------------
+@media screen and (min-width: 750px) and (max-width: 959px) {
+    .lister {
+        grid-template-columns: auto auto auto auto;
+    }
+    .lister.movies {
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 1em;
+    }
+    .movies .movie {
+        height: 270px;
+    }
+    
+}
+
+@media screen and (max-width: 749px) {
+    .lister {
+        grid-template-columns: auto;
+    }
+    .lister.movies {
+        grid-template-columns: auto auto auto;
+        //grid-column-gap: 12px;
+        .movie {
+            height: 200px;
+            width: 130px;      
+        }
+    }
+}

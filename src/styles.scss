@@ -42,3 +42,7 @@ header {
         color: #fff;
     }
 }
+*, ::after, ::before {
+    -webkit-box-sizing: initial !important;
+    box-sizing: initial !important;
+}
