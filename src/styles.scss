@@ -1,11 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: #141414;;
-    color: #fff;
+    background-color: #0e0f11 !important;
+    color: #EFEFEF;
+    height: 100%;
 }
 
-.listerCard {
-    img {
-        height: 402px;
+
+header {
+    height: 80px;
+    max-width: 1640px;
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    font-family: "Anton";
+    text-transform: uppercase;
+
+    & > div {
+        //margin: 1em;
+        flex: 33%;
     }
+
+    .title {
+        font-size: 2em;
+        text-align: center;
+        color: #850007;
+    }
+}
+.header {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    opacity: .6;
+    //margin: 0 auto;
+
+    & > div {
+        margin: .5em auto;
+        font-weight: 600;
+        color: #fff;
+    }
+}
+*, ::after, ::before {
+    -webkit-box-sizing: initial !important;
+    box-sizing: initial !important;
 }

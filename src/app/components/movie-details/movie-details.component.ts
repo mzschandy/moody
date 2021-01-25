@@ -16,9 +16,11 @@ export class MovieDetailsComponent implements OnInit {
   backdrop;
   poster;
   title;
+  rating;
   overview;
   actors = [];
   trailer;
+  release_date;
   watchedMovies;
   watchedMoviesStringify = [];
   favorites;
@@ -67,7 +69,7 @@ export class MovieDetailsComponent implements OnInit {
 
   testFunction()
    {
-     $(".header").css("color", "yellow")
+     $(".splide__slide").css("color", "yellow")
    }
 
 
@@ -81,9 +83,9 @@ export class MovieDetailsComponent implements OnInit {
       //this.movie = moods[+params.get('id')]
       //this.movie = +params['id'];
       this.movie = params.get("id")
-      console.log(this.movie)
+      //console.log(this.movie)
       //console.log("Path name:", this.mood.name)
-      console.log("Path id:", this.movie.id)
+      //console.log("Path id:", this.movie.id)
 
 
       this.databaseService.getMovieDetails(this.movie).subscribe(data => {
@@ -94,6 +96,10 @@ export class MovieDetailsComponent implements OnInit {
         //console.log(this.title)
         this.overview = data.overview;
         this.poster = data.poster_path;
+        this.backdrop = data.backdrop_path;
+        this.rating = data.vote_average;
+        this.genres = data.genres;
+        this.release_date = data.release_date;
         //console.log(data.overview)    
         //console.log(this.overview)   
       })

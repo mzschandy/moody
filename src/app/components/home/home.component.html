@@ -1,3 +1,4 @@
+<!--
 <div class="grid-container">
     <div class="grid-x" style="margin-top: 2em;">
         <div class="cell h4" style="margin: 0 auto; color: red; font-weight: 600; text-align: center;">I FEEL LIKE</div>
@@ -10,4 +11,32 @@
       </div>
     </a>
   </div>
+</div>
+-->
+
+<div class="grid-container">
+  <div class="grid-x header">
+    <div>I Feel Like</div>
+  </div>
+</div>
+<div class="grid-container full">
+  <!--
+  <div class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li  class="splide__slide" >
+          <a [routerLink]="['/mood', id]" *ngFor="let mood of moods; index as id" class="item">
+            <div>
+              <a>{{mood.name}}</a>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+  <splide [options] = "{type: 'loop',perPage: 4,perMove: 1, direction: 'ttb', height: '80vh',arrows: false,pagination: false}">
+    <splide-slide *ngFor="let mood of moods; index as id">
+      <a [routerLink]="['/mood', id]" class="item">{{mood.name}}</a>
+    </splide-slide>
+  </splide>
 </div>

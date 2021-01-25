@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { moods } from '../../model/moods'
+import { moods } from '../../model/moods';
+declare function initScroller(): any;
+declare function test(): any;
+
 
 @Component({
   selector: 'app-home',
@@ -12,6 +15,8 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
   ngOnInit(): void {
+    initScroller();
+    test();
   }
 
 }
