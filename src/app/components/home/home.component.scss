@@ -53,19 +53,24 @@ splide .is-active {
     }
 }
 splide {
-    .splide__slide.is-active  {
-        color: orange;
-    }
     .item {
-        color: orange;
+        //color: orange;
     }
 }
-.splide__slide {
-    color: orange !important;
+
+:host ::ng-deep .is-active > .item {
+    background-color: rgba(197,0,0,.31);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 115px;
+        font-size: 32px;
+        font-weight: 650;
+        text-transform: uppercase;
+        color: #fff;
+        opacity: 1;
 }
-.splide--draggable>.splide__track>.splide__list>.splide__slide {
-    color: orange;
-}
+
 .item {
     display: flex;
     justify-content: center;
@@ -79,9 +84,7 @@ splide {
 a:hover, a:focus {
     color: #fff !important;
 }
-:host(splide) .splide__slide.is-active > a {
-    color: red;
-}
+
 .moodTitle {
     color: #fff;
     margin-bottom: 1em;

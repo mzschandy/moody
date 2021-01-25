@@ -17,10 +17,13 @@ function initScroller() {
 
 function test() {
     //alert("Test Complete!");
-    //$("a").addClass("test");
+    //$("splide .item").css("color", "orange")
+    //$("splide a").addClass("test");
     //document.getElementById("splide01-slide01").style.backgroundColor = "blue";
 
 }
+
+$(".item").css("color", "orange")
 
 $(".splide__slide.is-active").css("background-color", "yellow");
 
