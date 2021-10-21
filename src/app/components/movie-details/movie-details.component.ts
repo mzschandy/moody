@@ -18,6 +18,7 @@ export class MovieDetailsComponent implements OnInit {
   title;
   rating;
   overview;
+  runtime;
   actors = [];
   trailer;
   release_date;
@@ -45,7 +46,7 @@ export class MovieDetailsComponent implements OnInit {
     //this.watchedMoviesStringify = JSON.stringify(this.favoritesService.getSeenlist())
     console.log('Watched movies ' + this.watchedMovies)
     //console.log('Watched movies stringify ' + this.watchedMoviesStringify)
-    console.log(this.watchedMovies[0].movieId, this.watchedMovies[0].movieName)
+    //console.log(this.watchedMovies[0].movieId, this.watchedMovies[0].movieName)
 
     /*
     for(const watchedMovie of this.watchedMovies) {
@@ -83,23 +84,24 @@ export class MovieDetailsComponent implements OnInit {
       //this.movie = moods[+params.get('id')]
       //this.movie = +params['id'];
       this.movie = params.get("id")
-      //console.log(this.movie)
+      console.log("this.movie", this.movie)
       //console.log("Path name:", this.mood.name)
-      //console.log("Path id:", this.movie.id)
+      console.log("Path id:", this.movie.id)
 
 
       this.databaseService.getMovieDetails(this.movie).subscribe(data => {
-        console.log(data)
+        console.log("data", data)
 
         this.title = data.title;
-        //console.log(data.title)
-        //console.log(this.title)
+        console.log(data.title)
+        console.log(this.title)
         this.overview = data.overview;
         this.poster = data.poster_path;
         this.backdrop = data.backdrop_path;
         this.rating = data.vote_average;
         this.genres = data.genres;
         this.release_date = data.release_date;
+        this.runtime = data.runtime;
         //console.log(data.overview)    
         //console.log(this.overview)   
       })

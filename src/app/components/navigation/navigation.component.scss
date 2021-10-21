@@ -11,7 +11,7 @@ header {
     font-family: "Anton";
     text-transform: uppercase;
 
-    & > div {
+    & > div, a {
         //margin: 1em;
         flex: 33%;
     }
